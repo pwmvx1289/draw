@@ -40,7 +40,40 @@
 	<script src='/static/js/lib/jquery.pep.min.js'></script>
         <script src='/static/js/draw.js' type="text/paperscript" canvas="myCanvas"></script>
         <script>document.domain = document.domain;</script>
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     </head>
+
+    <style type="text/css">
+    #helptext {
+        font-size:15px;
+        margin-left:12px;
+        margin-top:5px;
+    }
+    </style>
+
+    <script type="text/javascript">
+    $("#drawTool").hover(function(){
+            $("#helptext").html("Draw Tool: Draw with brush");
+        },function(){
+            $("#helptext").html("");
+        });
+    $("#pencilTool").hover(function(){
+            $("#helptext").html("Pencil Tool: Draw with pencil");
+        },function(){
+            $("#helptext").html("");
+        });
+    $("#selectTool").hover(function(){
+            $("#helptext").html("Select Tool: Select an image");
+        },function(){
+            $("#helptext").html("");
+        });
+    $("#uploadImage").hover(function(){
+            $("#helptext").html("Upload Image: Upload an image");
+        },function(){
+            $("#helptext").html("");
+        });
+    </script>
+
     <body>
 
         <div id="editbar" class="toolbar">
@@ -72,6 +105,7 @@
                       <span class="buttonicon buttonicon-upload"></span>
                     </a>
                 </li>
+                <li id="helptext"></li>
             </ul>
             <ul class="menu_right">
 
